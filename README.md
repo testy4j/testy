@@ -1,6 +1,6 @@
 # Testy
 
-*Testy is a Fluent HTTP API Java library, especially designed to be integrated with [pal](http://paltest.org)*
+*Testy is a Fluent API Java library, especially designed to be integrated with [pal](http://paltest.org)*
 
 **Versioning**:  [Semantic Versioning](http://semver.org/)
 
