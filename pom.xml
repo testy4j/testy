@@ -9,7 +9,7 @@
 
     <groupId>com.lyncode</groupId>
     <artifactId>testy</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <name>Testy</name>
@@ -28,7 +28,7 @@
         <connection>scm:git:git@github.com:lyncode/testy.git</connection>
         <developerConnection>scm:git:git@github.com:lyncode/testy.git</developerConnection>
         <url>git@github.com:lyncode/testy.git</url>
-        <tag>testy-1.0.0</tag>
+        <tag>testy-1.0.1</tag>
     </scm>
 
     <properties>
