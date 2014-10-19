@@ -25,7 +25,7 @@ public class TestyHttpClient {
 
     public TestyHttpClient receives (TestyHttpRequestBuilder request) {
         try {
-            HttpRequestBase build = request.build(baseURL);
+            HttpRequestBase build = request.request(baseURL);
             for (RequestInterceptor requestInterceptor : requestInterceptors) {
                 requestInterceptor.intercept(build);
             }
