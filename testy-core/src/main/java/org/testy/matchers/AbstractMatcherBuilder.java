@@ -34,4 +34,8 @@ public class AbstractMatcherBuilder<M extends AbstractMatcherBuilder, T> extends
         this.matchers.add(matcher);
         return (M) this;
     }
+
+    public M and () {
+        return (M) this;
+    }
 }
