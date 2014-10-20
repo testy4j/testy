@@ -33,7 +33,7 @@ public class TestyHttpClient {
             for (ResponseInterceptor responseInterceptor : responseInterceptors) {
                 responseInterceptor.intercept(response);
             }
-            responses.add(new TestyHttpResponse(response));
+            responses.add(new TestyHttpResponse(response, build.getURI().toURL()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

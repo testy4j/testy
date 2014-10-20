@@ -284,5 +284,8 @@
     <modules>
         <module>testy-core</module>
         <module>testy-http</module>
+        <module>testy-json</module>
+        <module>testy-all</module>
+        <module>testy-xml</module>
     </modules>   
 </project>

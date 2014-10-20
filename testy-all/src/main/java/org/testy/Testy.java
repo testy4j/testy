@@ -1,11 +1,34 @@
 package org.testy;
 
 import org.testy.http.*;
+import org.testy.http.matchers.HtmlMatcherBuilder;
 import org.testy.http.matchers.HttpHeaderMatcherBuilder;
 import org.testy.http.matchers.HttpResponseMatcherBuilder;
+import org.testy.matchers.json.JsonMatcherBuilder;
+import org.testy.matchers.xml.XmlMatcherBuilder;
 
-public class TestyHttp {
-    // HTTP
+public class Testy {
+    // Matchers
+    public static HttpResponseMatcherBuilder response () {
+        return new HttpResponseMatcherBuilder();
+    }
+    public static HttpHeaderMatcherBuilder header () {
+        return new HttpHeaderMatcherBuilder();
+    }
+    public StringBodyContentBuilder content(String body) {
+        return new StringBodyContentBuilder(body);
+    }
+    public FormBodyContentBuilder form() {
+        return new FormBodyContentBuilder();
+    }
+    public UrlBuilder path (String path) { return UrlBuilder.path(path); }
+
+    public static JsonMatcherBuilder json () {
+        return new JsonMatcherBuilder();
+    }
+    public static XmlMatcherBuilder xml () { return new XmlMatcherBuilder(); }
+    public static HtmlMatcherBuilder html () { return new HtmlMatcherBuilder(); }
+
     public static TestyHttpGetRequestBuilder get() {
         return new TestyHttpGetRequestBuilder();
     }
@@ -38,24 +61,7 @@ public class TestyHttp {
         return new HeaderBuilder(name);
     }
 
-    public static StringBodyContentBuilder content(String body) {
-        return new StringBodyContentBuilder(body);
-    }
-    public static FormBodyContentBuilder form() {
-        return new FormBodyContentBuilder();
-    }
-    public static UrlBuilder path (String path) { return UrlBuilder.path(path); }
-
     public static TestyHttpClient server(String baseUrl) {
         return new TestyHttpClient(baseUrl);
     }
-
-    // Matchers
-    public static HttpResponseMatcherBuilder response () {
-        return new HttpResponseMatcherBuilder();
-    }
-    public static HttpHeaderMatcherBuilder header () {
-        return new HttpHeaderMatcherBuilder();
-    }
-
 }

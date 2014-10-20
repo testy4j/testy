@@ -5,15 +5,18 @@ import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
 public class TestyHttpResponse {
     private final String content;
     private HttpResponse response;
+    private URL uri;
 
-    public TestyHttpResponse(HttpResponse response) {
+    public TestyHttpResponse(HttpResponse response, URL uri) {
         this.response = response;
+        this.uri = uri;
         try {
             this.content = IOUtils.toString(response.getEntity().getContent());
         } catch (IOException e) {
@@ -31,5 +34,9 @@ public class TestyHttpResponse {
 
     public List<Header> headers() {
         return Arrays.asList(response.getAllHeaders());
+    }
+
+    public URL uri() {
+        return uri;
     }
 }

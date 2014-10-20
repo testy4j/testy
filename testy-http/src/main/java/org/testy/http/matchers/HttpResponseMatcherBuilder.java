@@ -19,6 +19,10 @@ public class HttpResponseMatcherBuilder extends AbstractMatcherBuilder<HttpRespo
         });
     }
 
+    public HttpResponseMatcherBuilder with(HtmlMatcherBuilder matcher) {
+        return super.with(matcher);
+    }
+
     public HttpResponseMatcherBuilder withStatusCode(Matcher<Integer> statusCodeMatcher) {
         return with(new FeatureMatcher<TestyHttpResponse, Integer>(statusCodeMatcher, "status code", "HTTP status") {
             @Override
