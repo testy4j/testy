@@ -7,7 +7,7 @@
         <version>7</version>
     </parent>
 
-    <groupId>com.lyncode</groupId>
+    <groupId>org.testy</groupId>
     <artifactId>testy</artifactId>
     <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -25,9 +25,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:lyncode/testy.git</connection>
-        <developerConnection>scm:git:git@github.com:lyncode/testy.git</developerConnection>
-        <url>git@github.com:lyncode/testy.git</url>
+        <connection>scm:git:git@github.com:testy4j/testy.git</connection>
+        <developerConnection>scm:git:git@github.com:testy4j/testy.git</developerConnection>
+        <url>git@github.com:testy4j/testy.git</url>
         <tag>testy-1.0.0</tag>
     </scm>
 
